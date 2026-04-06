@@ -11,7 +11,7 @@ class Lore < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/GreyCoderK/lore/releases/download/v1.0.0/lore_Darwin_x86_64.tar.gz"
-      sha256 "40268d39b37655526ec2af4f5e5f3117481dfe7c0a1cc776e5bbc7cf6ddb1b32"
+      sha256 "eef4cd23fdcab442042818523b8251b3387b4a7bb345cfeade7240eb7a88593c"
 
       define_method(:install) do
         bin.install "lore"
@@ -19,7 +19,7 @@ class Lore < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/GreyCoderK/lore/releases/download/v1.0.0/lore_Darwin_arm64.tar.gz"
-      sha256 "fa5a1a4da246d922e6784d1b52eee957b7d1a5b4998d23e359408e28270891a0"
+      sha256 "e4aadcf193c36c5a6039284175fce0e0f5de58279681250b32eae533f8337de0"
 
       define_method(:install) do
         bin.install "lore"
@@ -30,14 +30,14 @@ class Lore < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/GreyCoderK/lore/releases/download/v1.0.0/lore_Linux_x86_64.tar.gz"
-      sha256 "887cb187e5609650a1465831f2d8c015df4c37e84fae2e1d64d32d90f360c626"
+      sha256 "36db14be56e8f6a5bbb4ed061905bb1aeed939cfa0139c4997feef05cd666d13"
       define_method(:install) do
         bin.install "lore"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/GreyCoderK/lore/releases/download/v1.0.0/lore_Linux_arm64.tar.gz"
-      sha256 "1d9641a2875fe8356ce75730188c42524f6fba71c21786cc75685f6682671d2e"
+      sha256 "08b4a1917530d2a357b3ea4016b7e9de08a1da869daa526438dc8bf89c925d21"
       define_method(:install) do
         bin.install "lore"
       end
