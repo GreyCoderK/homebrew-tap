@@ -5,21 +5,21 @@
 class Lore < Formula
   desc "A CLI tool that captures the why behind your code, one commit at a time"
   homepage "https://github.com/GreyCoderK/lore"
-  version "1.2.2"
+  version "1.2.3"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.2/lore_Darwin_x86_64.tar.gz"
-      sha256 "d1fa460cfbc8ad3a811f4adaebbfe35ee242150f3faf890f9ab73d0e06ef5d23"
+      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.3/lore_Darwin_x86_64.tar.gz"
+      sha256 "144364b9220b7071c05557268c6bb4d4145383348cf70eab31e31d4fe2054b2f"
 
       define_method(:install) do
         bin.install "lore"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.2/lore_Darwin_arm64.tar.gz"
-      sha256 "14178e29129ec08c1f0380a64d7fe8ef64120b5f84d203d3a29e6e047a86e5f2"
+      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.3/lore_Darwin_arm64.tar.gz"
+      sha256 "2eade045360a066aa869b7358761fc78dbc7be58c917783bdcac3a5ddaeee099"
 
       define_method(:install) do
         bin.install "lore"
@@ -29,15 +29,15 @@ class Lore < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.2/lore_Linux_x86_64.tar.gz"
-      sha256 "5053e51fd57a426c7a6614e1b6fe9effb3245ef35e0f64f2200792cde7e92102"
+      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.3/lore_Linux_x86_64.tar.gz"
+      sha256 "77d067cc32e94c6a878792d400a0d837f34f9e5af3cfd2d5af4f5301d88a97db"
       define_method(:install) do
         bin.install "lore"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.2/lore_Linux_arm64.tar.gz"
-      sha256 "962a4fb2b01db23a17df4896aa55cf6472a8eecb01bfe75e7fd7e0fe9ef98d0f"
+      url "https://github.com/GreyCoderK/lore/releases/download/v1.2.3/lore_Linux_arm64.tar.gz"
+      sha256 "0ba514dd26f4ab5744d08496a85ad2cbc0e9c8cd750433408a958fb5283a53af"
       define_method(:install) do
         bin.install "lore"
       end
